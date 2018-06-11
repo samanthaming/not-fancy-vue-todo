@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <title>Not Fancy Todo App built with Vue.js + Bulma</title>
+</head>
+<body>
+
+  <!-- app -->
+  <div id="app">
+    <div class="outer-container">
+      <div class="inner-container">
+
+        <h1 class="title is-1">TODO</h1>
+
+        <div class="field is-grouped">
+          <p class="control is-expanded">
+            <input
+              class="input"
+              v-model="todoText"
+              placeholder="Enter todo"
+              v-on:keyup.enter="add"
+            />
+          </p>
+          <p class="control">
+            <button
+              class="button is-info"
+              @click.enter="add">
+              Add
+            </button>
+          </p>
+          <p class="control">
+            <button
+              class="button is-danger"
+              @click="deleteAll">
+              Delete all
+            </button>
+          </p>
+        </div>
+        <ul class="todo-list">
+          <li v-for="(todo, index) in todos" :key="todo.id">
+            <div class="block">
+              <span class="tag is-large">
+                {{ index + 1 }} - {{ todo.text }}
+                <button
+                  class="delete is-small"
+                  @click="deleteTodo(index)">
+                </button>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="vue.js"></script>
+</body>
+</html>
+
+
+<!-- Notes
+  "delete" is a reserved word, don't use it as a method name
+ -->

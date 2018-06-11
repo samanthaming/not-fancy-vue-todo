@@ -1,0 +1,29 @@
+/* ==================
+ *  VARIABLES
+ * ================== */
+:root {
+  --color-black: hsl(0, 0%, 7%);
+  --color-gray: hsl(0, 0%, 71%);
+  --color-white: hsl(0, 0%, 98%);
+
+  --color-blue: hsl(204, 86%, 53%);
+}
+/* ==================
+ *  APP
+ * ================== */
+.outer-container {
+  display: flex;
+  justify-content: center;
+}
+.inner-container {
+  padding: 30px;
+}
+ul.todo-list {
+  margin-top: 20px;
+}
+ul.todo-list .delete {
+  margin-left: 0.50rem;
+}
+ul.todo-list li {
+  margin-bottom: 15px;
+}
