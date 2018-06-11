@@ -1,4 +1,4 @@
-# Not Fancy Todo App
+# Not Fancy Vue Todo App
 
 A simple, not fancy at all, Todo App built using Vue and Bulma.
 
