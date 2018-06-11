@@ -7,6 +7,8 @@ Features include:
 - Delete todo
 - Delete all
 
+Play around with it on [CodePen](https://codepen.io/samanthaming/pen/pKeLzQ)
+
 <br>
 
 ![App](images/not-fancy-todo-app.png)
